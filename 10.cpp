@@ -3,7 +3,7 @@
 #include <bits/stdc++.h> 
 using namespace std; 
   
-int SieveOfEratosthenes(int n) 
+long long int SieveOfEratosthenes(int n) 
 { 
     // Create a boolean array "prime[0..n]" and initialize 
     // all entries it as true. A value in prime[i] will 
@@ -24,7 +24,7 @@ int SieveOfEratosthenes(int n)
     } 
   
     // Print all prime numbers 
-    int ans = 0;
+    long long int ans = 0;
     for (int p = 2; p <= n; p++) {
 
 if (prime[p]) {
@@ -35,7 +35,7 @@ if (prime[p]) {
 
     }
 
-    cout<<ans<<endl;
+    return ans;
         
 } 
   
@@ -45,6 +45,9 @@ int main()
     int n = 2000000; 
     cout << "Following are the prime numbers smaller "
          << " than or equal to " << n << endl; 
-    SieveOfEratosthenes(n); 
+    cout<<SieveOfEratosthenes(n); 
+
+
+    //ans : 142913828922
     return 0; 
 }
